@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <title>Stimulus Event Bus</title>
+</head>
+<body>
+
+  <div stimulus-event-bus></div>
+
+  <p class="bookings-counter">
+    <span data-bookings-counter-current-count="0" class="bookings-counter--count" data-controller="bookings-counter">0</span>
+    flats booked
+  </p>
+  <section class="cards">
+
+    <div data-controller="flat-card" class="card-trip">
+      <img src="https://source.unsplash.com/bjej8BY1JYQ/1600x900" />
+      <div class="card-trip-infos">
+        <div class="inner">
+          <div>
+            <h2>Flat #1</h2>
+            <p>Amazing!</p>
+          </div>
+          <a class="btn btn-flat" data-action="flat-card#registerBooking">Book me</a>
+        </div>
+        <h2 class="card-trip-pricing">€99</h2>
+        <img src="https://kitt.lewagon.com/placeholder/users/pedrolane" class="card-trip-user avatar-bordered" />
+      </div>
+    </div>
+    <div data-controller="flat-card" class="card-trip">
+      <img src="https://source.unsplash.com/N90LM3A5AZQ/1600x900" />
+      <div class="card-trip-infos">
+        <div class="inner">
+          <div>
+            <h2>Flat #2</h2>
+            <p>Beautiful!</p>
+          </div>
+          <a class="btn btn-flat" data-action="flat-card#registerBooking">Book me</a>
+        </div>
+        <h2 class="card-trip-pricing">€120</h2>
+        <img src="https://kitt.lewagon.com/placeholder/users/cveneziani" class="card-trip-user avatar-bordered" />
+      </div>
+    </div>
+    <div data-controller="flat-card" class="card-trip">
+      <img src="https://source.unsplash.com/uY2kic9wlmc/1600x900" />
+      <div class="card-trip-infos">
+        <div class="inner">
+          <div>
+            <h2>Flat #3</h2>
+            <p>Intriguing</p>
+          </div>
+          <a class="btn btn-flat" data-action="flat-card#registerBooking">Book me</a>
+        </div>
+        <h2 class="card-trip-pricing">€99</h2>
+        <img src="https://kitt.lewagon.com/placeholder/users/nfilzi" class="card-trip-user avatar-bordered" />
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>CSS components from <a target="_blank" href="https://uikit.lewagon.com/">Le Wagon UI Kit</a> & <a target="_blank"  href="https://parceljs.org/">Parcel</a> setup for quick bundling</p>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+</html>
